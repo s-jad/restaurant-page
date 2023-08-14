@@ -19,11 +19,9 @@ tabs.forEach(tab => {
 
 function handleTab(ev) {
     const toRemove = content.querySelectorAll('[id$="-page"]')[0];
-    console.log(toRemove);
 
     if (ev.target.id === "welcome-tab") {
         const toAdd = welcomePageContent();
-        console.log(toAdd);
         toRemove.classList.add("hide-top");
         toAdd.classList.add("hide-bottom");
         content.appendChild(toAdd);
@@ -34,7 +32,6 @@ function handleTab(ev) {
         }, 310);
     } else if (ev.target.id === "menu-tab") {
         const toAdd = MenuPage();
-        console.log(toAdd);
 
         toRemove.classList.add("hide-top");
         toAdd.classList.add("hide-bottom");
@@ -46,7 +43,6 @@ function handleTab(ev) {
         }, 310);
     } else if (ev.target.id === "contact-tab") {
         const toAdd = ContactPage();
-        console.log(toAdd);
 
         toRemove.classList.add("hide-top");
         toAdd.classList.add("hide-bottom");
