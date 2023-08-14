@@ -1,14 +1,4 @@
 import "./style.css"
+import WelcomePage from "./welcome-page.js";
 
-function App() {
-    const element = document.createElement('div');
-    
-    element.innerText = "This is a test from the App";
-
-    return element;
-}
-
-document.body.appendChild(App());
-
-
-
+document.body.appendChild(WelcomePage());
