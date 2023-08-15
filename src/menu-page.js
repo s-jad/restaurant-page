@@ -1,10 +1,10 @@
 export default function MenuPage() {
-    const menuContent = document.createElement('div');
+    const menuPage = document.createElement('div');
 
-    menuContent.id = "menu-page";
-    menuContent.classList.add('flex');
+    menuPage.id = "menu-page";
+    menuPage.classList.add('flex');
 
-    menuContent.innerHTML = `
+    menuPage.innerHTML = `
         <h1 id="menu-title">Menu</h1>
         <div id="menu-content" class="grid">
             <div id="tapas-card" class="menu-card flex">
@@ -31,13 +31,13 @@ export default function MenuPage() {
 
         `;
 
-    const cards = Array.from(menuContent.querySelectorAll('.menu-card'));
+    const cards = Array.from(menuPage.querySelectorAll('.menu-card'));
 
     cards.forEach(card => {
         card.addEventListener("click", handleCardEvents);
     });
 
-    return menuContent;
+    return menuPage;
 }
 
 function selectImage(card) {
