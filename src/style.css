@@ -81,9 +81,26 @@ select {
 
 /* START OF STYLES */
 
+:root {
+    --dark-blue: hsl(208, 95%, 8%);
+    --mid-blue: hsl(214, 97%, 13%);
+    --mid-purple: hsl(344, 35%, 34%);
+    --light-yellow: hsl(47, 77%, 92%);
+    --mid-orange: hsl(10, 65%, 34%);
+}
+
+@font-face {
+  font-family: 'ShadowsIntoLight-Regular';
+  src: url('./assets/ShadowsIntoLight-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
 /* ELEMENT STYLES */
 
 body {
+    color: var(--light-yellow);
     font-size: 1.6rem;
 }
 
@@ -99,6 +116,20 @@ p {
     display: block;
 }
 
+h1 {
+    font-family: "ShadowsIntoLight-Regular";
+    font-size: clamp(30px, 3.6rem, 40px);
+}
+
+h2 {
+    font-family: "ShadowsIntoLight-Regular";
+    font-size: clamp(24px, 3rem, 34px);
+}
+
+h3 {
+    font-family: "ShadowsIntoLight-Regular";
+    font-size: clamp(22px, 2.6rem, 30px);
+}
 /* UTILITY CLASSES */
 
 .flex {
@@ -121,13 +152,18 @@ p {
 
 #page-header,
 #page-footer {
-    background: slategrey;
+    font-size: clamp(18px, 2rem, 22px);
+    font-weight: 600;
+    background: var(--dark-blue);
     width: 100%;
 }
 
 #page-footer {
+    align-items: center;
+    justify-content: center;
     bottom: 0;
-    height: 10vh;
+    height: 5vh;
+    color: var(--light-yellow);;
 }
 
 #page-header {
@@ -135,13 +171,14 @@ p {
     height: 15vh;
 }
 
-#header-tab-flex {
+#header-flex {
+    padding: 0 1rem;
     align-items: end;
 }
 
-#header-tab-flex,
+#header-flex,
 #colorscheme-switch-flex {
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100%;
 }
 
@@ -156,7 +193,7 @@ p {
 }
 
 .tab {
-    background: hsl(0, 0%, 100%);
+    background: var(--mid-orange);
     scale: 1;
     transform: translateY(0);
     transition: background 300ms ease-in-out,
@@ -169,12 +206,16 @@ p {
     text-align: center;
     border-radius: 2rem 0.5rem 0 0;
     cursor: pointer;
+
+    font-size: clamp(22px, 2.6rem, 30px);
+    font-family: "ShadowsIntoLight-Regular";
 }
 
 .tab:hover,
 .tab:focus-within {
     scale: 1.1;
-    background: hsl(0, 0%, 70%);
+    background: var(--light-yellow);
+    color: var(--dark-blue);
     transform: translateY(-2px);
 }
 
@@ -183,9 +224,17 @@ p {
     padding-right: 1rem;
 }
 
-#recipe-search {
-    padding-left: 1.5rem;
-    border-radius: 9999px;
+/* Page Content */
+
+#page-content {
+    height: 100vh;
+    width: 100vw;
+}
+
+#image-filter {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(ellipse at center, hsla(208, 95%, 8%, 0.7) 10%, transparent);
 }
 
 #welcome-page,
@@ -195,8 +244,7 @@ p {
     z-index: 0;
     top: 0;
     opacity: 1;
-    margin-top: 15vh;
-    height: 75vh;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -218,6 +266,31 @@ p {
     opacity: 0;
 }
 
+#welcome-text-container {
+    height: 30vh;
+    transform: translateY(-15vh);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-title {
+    font-size: clamp(50px, 5.6rem, 60px);
+}
+
+#welcome-text {
+    font-size: clamp(30px, 3.6rem, 40px);
+}
+
+#welcome-title,
+#welcome-text {
+    color: var(--light-yellow);
+    font-family: "ShadowsIntoLight-Regular";
+}
+
+
 #menu-content {
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
@@ -234,7 +307,10 @@ p {
     opacity: 1;
     padding: 1rem;
     gap: 1rem;
-    border: 1px solid black;
+    background: hsla(208, 95%, 8%, 0.8);
+    border: 1px solid var(--light-yellow);
+    box-shadow: 0 2px 5px var(--dark-blue),
+                inset 0 0 2px var(--light-yellow);
     border-radius: 2rem 0.5rem 2rem 0.5rem;
     cursor: pointer;
     transition: opacity 300ms ease-in-out;
@@ -258,18 +334,17 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 2vh;
+    top: 17.5vh;
     left: 15vw;
     height: 70vh;
     width: 70vw;
 }
 
 .menu-card-title {
-    flex-basis: 1;
+    min-width: 100px;
 }
 
 .menu-description {
-    flex-basis: 3;
 }
 
 #contact-card {
@@ -277,6 +352,12 @@ p {
     gap: 0.5rem;
     grid-template-columns: repeat(6, 1fr);
     padding: 1rem;
+
+    background: hsla(208, 95%, 8%, 0.8);
+    border: 1px solid var(--light-yellow);
+    border-radius: 2rem 0.5rem 2rem 0.5rem;
+    box-shadow: 0 2px 5px var(--dark-blue),
+                inset 0 0 2px var(--light-yellow);
 }
 
 #contact-card > h2 {
