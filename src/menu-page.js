@@ -75,7 +75,7 @@ function expandCard(card) {
 }
 
 function shrinkCard(card) {
-    const pageContent = document.getElementById('page-content');
+    const pageContent = document.getElementById('image-filter');
     const menuPage = document.getElementById('menu-page');
 
     card.classList.add('disappear');

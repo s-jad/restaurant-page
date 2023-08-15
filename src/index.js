@@ -8,7 +8,7 @@ document.body.appendChild(pageHeader());
 document.body.appendChild(PageLoad());
 document.body.appendChild(pageFooter());
 
-const content = document.getElementById('page-content');
+const content = document.getElementById('image-filter');
 const tabs = Array.from(document.querySelectorAll('.tab'));
 
 // TAB EVENT LISTENERS 
