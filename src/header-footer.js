@@ -13,13 +13,12 @@ export function pageHeader() {
                     <div id="contact-tab" class="tab">Contact</div>
                 </div>
 
-                <div id="colorscheme-flex" class="flex">
-                    <label for="colorscheme-switch">Colorscheme</label>
-                    <div id="colorscheme-switch-flex" class="flex">
-                        <input id="dark-scheme" name="colorscheme-switch" type="radio">
-                        <input id="light-scheme" name="colorscheme-switch" type="radio">
-                    </div>
-            </div>
+                <div id="icon-flex" class="flex">
+                    <img class="social-media-icon" id="facebook-icon" src="./assets/facebook.svg">
+                    <img class="social-media-icon" id="twitter-icon" src="./assets/twitter.svg">
+                    <img class="social-media-icon" id="whatsapp-icon" src="./assets/whatsapp.svg">
+                </img>
+            </img>
         `;
 
     return welcomeHeader;
