@@ -6,7 +6,7 @@ export function pageHeader() {
     welcomeHeader.classList.add('zi-10');
 
     welcomeHeader.innerHTML = `
-            <div id="header-tab-flex" class="flex">
+            <div id="header-flex" class="flex">
                 <div id="tab-flex" class="flex">
                     <div id="welcome-tab" class="tab">Welcome</div>
                     <div id="menu-tab" class="tab">Menu</div>
@@ -30,9 +30,10 @@ export function pageFooter() {
 
     footer.id = "page-footer";
     footer.classList.add('fixed');
+    footer.classList.add('flex');
 
     footer.innerHTML = `
-            <div id="copywrite">Copywrite - A Chef</div>
+            <div id="copyright">Copyright - A Chef</div>
             <ul id="footer-links-flex" class="flex">
                 <li class="icon"><a href="#"></a></li>
                 <li class="icon"><a href="#"></a></li>
