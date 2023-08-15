@@ -1,3 +1,7 @@
+import facebookSVG from "./assets/facebook.svg";
+import twitterSVG from "./assets/twitter.svg";
+import whatsappSVG from "./assets/whatsapp.svg";
+
 export function pageHeader() {
     const welcomeHeader = document.createElement('header');
 
@@ -13,13 +17,29 @@ export function pageHeader() {
                     <div id="contact-tab" class="tab">Contact</div>
                 </div>
 
-                <div id="icon-flex" class="flex">
-                    <img class="social-media-icon" id="facebook-icon" src="./assets/facebook.svg">
-                    <img class="social-media-icon" id="twitter-icon" src="./assets/twitter.svg">
-                    <img class="social-media-icon" id="whatsapp-icon" src="./assets/whatsapp.svg">
-                </img>
-            </img>
+                <div id="icon-flex" class="flex"></div>
+            </div>
         `;
+
+    // Import icon svgs and append them to iconFlex
+    const iconFlex = welcomeHeader.querySelector("#icon-flex");
+
+    const facebookIcon = new Image();
+    facebookIcon.src = facebookSVG;
+    facebookIcon.classList.add('social-media-icon');
+
+    const twitterIcon = new Image();
+    twitterIcon.src = twitterSVG;
+    twitterIcon.classList.add('social-media-icon');
+
+    const whatsappIcon = new Image();
+    whatsappIcon.src = whatsappSVG;
+    whatsappIcon.classList.add('social-media-icon');
+
+
+    iconFlex.appendChild(facebookIcon);
+    iconFlex.appendChild(twitterIcon);
+    iconFlex.appendChild(whatsappIcon);
 
     return welcomeHeader;
 }
