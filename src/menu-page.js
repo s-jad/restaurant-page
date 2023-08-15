@@ -53,9 +53,11 @@ function selectImage(card) {
         image.src = "assets/sandwich.jpg";
     }
 
-    image.style.backgroundSize = "cover";
+    image.style.width = "40vw";
+    image.style.minWidth = "200px";
+    image.style.maxWidth = "500px";
+    image.style.height = "auto";
     image.style.backgroundRepeat = "no-repeat";
-    image.style.maxWidth = "430px";
     return image;
 }
 
