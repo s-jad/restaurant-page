@@ -22,3 +22,9 @@ Link: https://www.pexels.com/@dogu-tuncer-339534179/
 ###### welcome-image.jpg
 Artist: Jay Mantri
 Link: https://www.pexels.com/@jaymantri/
+
+### Font Attributions
+
+###### ShadowsIntoLight-Regular
+Artist: Kimberly Geswein (kimberlygeswein.com)
+License found in src/OFL.txt
