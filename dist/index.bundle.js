@@ -118,7 +118,7 @@ select {
 
 @font-face {
   font-family: 'ShadowsIntoLight-Regular';
-  src: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) format('truetype');
+  src: url('./assets/ShadowsIntoLight-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 
