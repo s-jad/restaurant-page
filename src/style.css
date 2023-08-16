@@ -94,7 +94,6 @@ select {
   src: url('./assets/ShadowsIntoLight-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-
 }
 
 /* ELEMENT STYLES */
@@ -245,6 +244,7 @@ h3 {
     top: 0;
     z-index: -1;
     width: 100%;
+    min-width: 1000px;
     height: auto;
 }
 
@@ -385,7 +385,6 @@ h3 {
 
 .menu-card.expanded > img {
     grid-column: 3 / 6;
-    max-width: 300px;
 }
 
 .menu-card-title {
