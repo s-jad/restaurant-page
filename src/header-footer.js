@@ -1,7 +1,3 @@
-import facebookSVG from "./assets/facebook.svg";
-import twitterSVG from "./assets/twitter.svg";
-import whatsappSVG from "./assets/whatsapp.svg";
-
 export function pageHeader() {
     const welcomeHeader = document.createElement('header');
 
@@ -25,17 +21,16 @@ export function pageHeader() {
     const iconFlex = welcomeHeader.querySelector("#icon-flex");
 
     const facebookIcon = new Image();
-    facebookIcon.src = facebookSVG;
+    facebookIcon.src = "./assets/facebook.svg";
     facebookIcon.classList.add('social-media-icon');
 
     const twitterIcon = new Image();
-    twitterIcon.src = twitterSVG;
+    twitterIcon.src = "./assets/twitter.svg";
     twitterIcon.classList.add('social-media-icon');
 
     const whatsappIcon = new Image();
-    whatsappIcon.src = whatsappSVG;
+    whatsappIcon.src = "./assets/whatsapp.svg";
     whatsappIcon.classList.add('social-media-icon');
-
 
     iconFlex.appendChild(facebookIcon);
     iconFlex.appendChild(twitterIcon);

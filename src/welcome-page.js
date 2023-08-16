@@ -1,14 +1,11 @@
-import { pageHeader, pageFooter } from "./header-footer.js"
-import welcomeImg from "./assets/welcome-image.jpg"
-
 export default function PageLoad() {
     const welcome = document.createElement('div');
     const imageFilter = document.createElement('div');
+    welcome.id = "page-content";
 
     const welcomeImage = new Image();
-    welcomeImage.src = welcomeImg;
+    welcomeImage.src = "./assets/welcome-image.jpg";
     welcomeImage.id = "welcome-image";
-    welcome.id = "page-content";
     welcome.appendChild(welcomeImage);
 
     imageFilter.id = "image-filter";
