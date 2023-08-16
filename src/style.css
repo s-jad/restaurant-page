@@ -365,6 +365,7 @@ h3 {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    padding: 1rem;
     align-items: center;
     justify-content: center;
     top: 17.5vh;
@@ -374,16 +375,17 @@ h3 {
 }
 
 .menu-card.expanded > .menu-card-title {
-    grid-column: 1 / 7;
+    grid-column: 1 / 6;
     text-align: center;
 }
 
 .menu-card.expanded > .menu-description {
-    grid-column: 1 / 7;
+    grid-column: 1 / 6;
 }
 
 .menu-card.expanded > img {
-    grid-column: 3 / 7;
+    grid-column: 3 / 6;
+    max-width: 300px;
 }
 
 .menu-card-title {

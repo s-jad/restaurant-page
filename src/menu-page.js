@@ -41,7 +41,7 @@ export default function MenuPage() {
 }
 
 function selectImage(card) {
-    const image = document.createElement('img');
+    const image = new Image();
 
     if (card.id === "el-burger-card") {
         image.src = "assets/burger.jpg";
@@ -55,9 +55,9 @@ function selectImage(card) {
 
     image.style.width = "40vw";
     image.style.minWidth = "200px";
-    image.style.maxWidth = "500px";
+    image.style.maxWidth = "450px";
     image.style.height = "auto";
-    image.style.backgroundRepeat = "no-repeat";
+
     return image;
 }
 
