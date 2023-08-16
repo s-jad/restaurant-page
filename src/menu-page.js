@@ -61,6 +61,27 @@ function selectImage(card) {
     return image;
 }
 
+function getInfo(card) {
+    const price = document.createElement('p');
+    const allergens = document.createElement('p');
+
+    if (card.id === "el-burger-card") {
+        price.innerText = "14€";
+        allergens.innerText = "Milk products, Gluten";
+    } else if (card.id === "tapas-card") {
+        price.innerText = "3€ per dish";
+        allergens.innerText = "Shellfish, fish";
+    } else if (card.id === "paela-card") {
+        price.innerText = "12€";
+        allergens.innerText = "Shellfish, fish";
+    } else if (card.id === "ham-sandwich-card") {
+        price.innerText = "8€";
+        allergens.innerText = "Pork, Gluten";
+    }
+
+    return { price, allergens };
+}
+
 function expandCard(card) {
     const menuPage = document.getElementById('menu-page');
     const menuContent = document.getElementById('menu-content');
@@ -69,8 +90,26 @@ function expandCard(card) {
     menuContent.classList.add('disappear');
     menuTitle.classList.add('disappear');
 
+    const info = document.createElement('div');
+    info.classList.add('flex');
+    info.id = "meal-info";
+    info.style.flexDirection = "column";
+    info.style.gridColumn = "1 / 3";
+
+    const priceTitle = document.createElement('h3');
+    priceTitle.innerText = "Price:";
+    const allergensTitle = document.createElement('h3');
+    allergensTitle.innerText = "Allergens:";
+    const { price, allergens } = getInfo(card);
+
+    info.appendChild(priceTitle);
+    info.appendChild(price);
+    info.appendChild(allergensTitle);
+    info.appendChild(allergens);
+
     setTimeout(() => {
         card.classList.add('expanded');
+        card.appendChild(info);
         card.appendChild(selectImage(card));
         menuPage.appendChild(card);
     }, 500);
